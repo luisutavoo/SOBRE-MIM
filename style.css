@@ -1,48 +1,103 @@
-/* Resetando o padrão de margem e padding */
+/* Resetando margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo do corpo da página */
+/* Definindo a fonte principal */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* Header */
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(45deg, #4CAF50, #81C784);
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 50px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header h1 {
-    font-size: 2em;
-    margin: 0;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-/* Seção Sobre Mim */
+header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Seção Sobre */
 section#sobre {
-    background-color: #ffffff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+section#sobre .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 section#sobre h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 section#sobre p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Seção Contato */
+section#contato {
+    background-color: #81C784;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section#contato .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section#contato h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section#contato p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
 }
 
 /* Rodapé */
@@ -50,13 +105,9 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 15px 0;
 }
 
-footer a {
-    color: #ff9900;
-    text-decoration: none;
+footer p {
+    font-size: 1rem;
 }
