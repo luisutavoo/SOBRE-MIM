@@ -1,113 +1,195 @@
-/* Resetando margens e paddings */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Definindo a fonte principal */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
 }
 
-/* Header */
-header {
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #ff5722;
+}
+
+/* Home Section */
+.home {
     background: linear-gradient(45deg, #4CAF50, #81C784);
     color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    padding: 50px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 120px; /* Para ajustar a navbar fixa */
 }
 
-header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.home h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-header h1 {
-    font-size: 3rem;
+.home p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+.btn-main {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e64a19;
+}
+
+/* Sobre Section */
+.sobre {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out 1s;
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Habilidades Section */
+.habilidades {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.habilidades h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #e0f7fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card h3 {
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-/* Seção Sobre */
-section#sobre {
-    background-color: #fff;
-    padding: 40px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
-
-section#sobre .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section#sobre h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-section#sobre p {
+.skill-card p {
     font-size: 1.1rem;
-    margin-bottom: 15px;
     line-height: 1.6;
 }
 
-/* Seção Contato */
-section#contato {
+/* Contato Section */
+.contato {
     background-color: #81C784;
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-section#contato .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section#contato h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-section#contato p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.whatsapp-btn {
+.btn-whatsapp {
     background-color: #25D366;
     color: white;
-    font-size: 1.2rem;
     padding: 15px 30px;
-    border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
-.whatsapp-btn:hover {
+.btn-whatsapp:hover {
     background-color: #128C7E;
 }
 
-/* Rodapé */
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
-footer p {
-    font-size: 1rem;
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
